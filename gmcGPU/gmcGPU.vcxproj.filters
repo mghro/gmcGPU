@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{b949ef8a-a0cf-4e8d-8e42-8e5c75e53be6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\App">
+      <UniqueIdentifier>{d3d940b3-8770-460c-940b-47362e61937c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{6d79d180-3bff-49f1-9cb2-ea47e50357e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VisStudio">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="VisStudio\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\DirectX">
+      <UniqueIdentifier>{56d057fb-1194-4b48-a71c-ad05b915578e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\I/O">
+      <UniqueIdentifier>{95589b9c-1b2e-4ad1-9b00-f99fe5a1704f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CompObjects">
+      <UniqueIdentifier>{303303dc-1c73-4a21-8ce9-ff3eaf15fb76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DxShaders">
+      <UniqueIdentifier>{9b2bc3d1-52fd-493d-830e-fef925fa6857}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PacsMonitor%27">
+      <UniqueIdentifier>{945996da-1560-4294-8f78-ca0e4311f558}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Workflow">
+      <UniqueIdentifier>{90aa7384-42db-49d6-b00f-23ee85b8b0f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Gamma">
+      <UniqueIdentifier>{06aa0808-ae16-432f-875f-56961365d1bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\JSON">
+      <UniqueIdentifier>{7f226515-c926-4939-abf4-0d1ee7a8d84c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>VisStudio</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>VisStudio</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>VisStudio</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\allocator.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\assertions.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\config.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\forwards.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\json.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\json_features.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\json_tool.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\reader.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\value.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\version.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\writer.h">
+      <Filter>Source Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="App\AppDlgGMC.h">
+      <Filter>Source Files\App</Filter>
+    </ClInclude>
+    <ClInclude Include="App\AppGMC.h">
+      <Filter>Source Files\App</Filter>
+    </ClInclude>
+    <ClInclude Include="App\AppState.h">
+      <Filter>Source Files\App</Filter>
+    </ClInclude>
+    <ClInclude Include="App\AppConfigInstance.h">
+      <Filter>Source Files\App</Filter>
+    </ClInclude>
+    <ClInclude Include="CompObjects\IonPlan.h">
+      <Filter>Source Files\CompObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="CompObjects\PhantomQA.h">
+      <Filter>Source Files\CompObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\DeviceMaterials.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\DirectX.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\EngineBase.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\EnginePostCalc.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\EngineTransport.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\EngineVis.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\PointDose.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\ShaderPlan.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\Transport.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\BitmapUtils.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\DlgPlanGetPacs.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\DlgResultsSaveDicom.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\PanelConfig.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\PanelSetup.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\PanelTabCtrl.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\PanelResults.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\MsgBlinker.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Viewer.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\DcmtkGMC.h">
+      <Filter>Source Files\I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\DicomDose.h">
+      <Filter>Source Files\I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\DicomMsgParams.h">
+      <Filter>Source Files\I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\FileIO.h">
+      <Filter>Source Files\I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\PACSPipe.h">
+      <Filter>Source Files\I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\PACSServer.h">
+      <Filter>Source Files\I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Heapster.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Logger.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Utils.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Vector.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\JsonParser.h">
+      <Filter>Source Files\I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\ShaderResample.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\UniArray.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\TileConfig.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="PacsMonitor\PacsMonitor.h">
+      <Filter>Source Files\PacsMonitor%27</Filter>
+    </ClInclude>
+    <ClInclude Include="PacsMonitor\TimeParser.h">
+      <Filter>Source Files\PacsMonitor%27</Filter>
+    </ClInclude>
+    <ClInclude Include="Workflow\Workflow.h">
+      <Filter>Source Files\Workflow</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\PanelBase.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="App\VersionGMC.h">
+      <Filter>Source Files\App</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\DlgSaveQABeams.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\UniLoop.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\UniLoopDbg.h">
+      <Filter>Source Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\bounding_box.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\bp_tps.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\database.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\derivatives.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\dose_engine.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\gamma_structs.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\LM_cubicspline.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\logfile.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\matrix.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\tgif.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\tpsdata.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\tramp_utils.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\tricubic_alpha.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\vector_util.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\voxels_less_than_1.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\read_mdose.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamma\GammaIO.h">
+      <Filter>Source Files\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\DlgGammaThresholds.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\PanelPACSMonitor.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\ShaderRandom.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\SliceHedra.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\DicomStruct.h">
+      <Filter>Source Files\I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX\EngineVis3D.h">
+      <Filter>Source Files\DirectX</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="JSON\json_reader.cpp">
+      <Filter>Source Files\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="JSON\json_value.cpp">
+      <Filter>Source Files\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="JSON\json_writer.cpp">
+      <Filter>Source Files\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>VisStudio</Filter>
+    </ClCompile>
+    <ClCompile Include="App\AppDlgGMC.cpp">
+      <Filter>Source Files\App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\AppGMC.cpp">
+      <Filter>Source Files\App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\AppState.cpp">
+      <Filter>Source Files\App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\AppConfigInstance.cpp">
+      <Filter>Source Files\App</Filter>
+    </ClCompile>
+    <ClCompile Include="CompObjects\IonPlan.cpp">
+      <Filter>Source Files\CompObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="CompObjects\PhantomQA.cpp">
+      <Filter>Source Files\CompObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\DirectX.cpp">
+      <Filter>Source Files\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\EngineBase.cpp">
+      <Filter>Source Files\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\EnginePostCalc.cpp">
+      <Filter>Source Files\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\EngineTransport.cpp">
+      <Filter>Source Files\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\EngineVis.cpp">
+      <Filter>Source Files\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\Transport.cpp">
+      <Filter>Source Files\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\BitmapUtils.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\DlgPlanGetPacs.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\DlgResultsSaveDicom.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\PanelConfig.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\PanelSetup.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\PanelTabCtrl.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\PanelResults.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\MsgBlinker.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\Viewer.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\DicomDose.cpp">
+      <Filter>Source Files\I/O</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\FileIO.cpp">
+      <Filter>Source Files\I/O</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\PACSPipe.cpp">
+      <Filter>Source Files\I/O</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Utils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\JsonParser.cpp">
+      <Filter>Source Files\I/O</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\TileConfig.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="PacsMonitor\PacsMonitor.cpp">
+      <Filter>Source Files\PacsMonitor%27</Filter>
+    </ClCompile>
+    <ClCompile Include="PacsMonitor\TimeParser.cpp">
+      <Filter>Source Files\PacsMonitor%27</Filter>
+    </ClCompile>
+    <ClCompile Include="Workflow\Workflow.cpp">
+      <Filter>Source Files\Workflow</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\PanelBase.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\DlgSaveQABeams.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\bounding_box.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\bp_tps.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\derivatives.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\dose_engine.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\LM_cubicspline.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\logfile.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\tgif.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\tpsdata.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\tramp_utils.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\tricubic_alpha.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\vector_util.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\voxels_less_than_1.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamma\read_mdose.cpp">
+      <Filter>Source Files\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\DlgGammaThresholds.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\PanelPACSMonitor.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\SliceHedra.cpp">
+      <Filter>Source Files\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\DicomStruct.cpp">
+      <Filter>Source Files\I/O</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX\EngineVis3D.cpp">
+      <Filter>Source Files\DirectX</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gmcGPU.rc">
+      <Filter>VisStudio\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\gmcGPU.rc2">
+      <Filter>VisStudio\Resource Files</Filter>
+    </None>
+    <None Include="JSON\json_valueiterator.inl">
+      <Filter>Source Files\JSON</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\gmcGPU.ico">
+      <Filter>VisStudio\Resource Files</Filter>
+    </Image>
+    <Image Include="res\ColorScale.bmp">
+      <Filter>VisStudio\Resource Files</Filter>
+    </Image>
+    <Image Include="res\Tile1.bmp">
+      <Filter>VisStudio\Resource Files</Filter>
+    </Image>
+    <Image Include="res\Tile4.bmp">
+      <Filter>VisStudio\Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap4.bmp">
+      <Filter>VisStudio\Resource Files</Filter>
+    </Image>
+    <Image Include="res\Tile2H.bmp">
+      <Filter>VisStudio\Resource Files</Filter>
+    </Image>
+    <Image Include="res\Tile2V.bmp">
+      <Filter>VisStudio\Resource Files</Filter>
+    </Image>
+    <Image Include="res\ZoomUp.bmp">
+      <Filter>VisStudio\Resource Files</Filter>
+    </Image>
+    <Image Include="res\ZoomDown.bmp">
+      <Filter>VisStudio\Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shaders\ArrayMaxCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AuxDosesCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\TransportDevicesCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoseDiffPS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoseLevelsPS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoseStatsCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\PointDoseCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\Resampler3DCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\SpotPrepCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\TextureMaxCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\EnergyCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\EnergyPatientFreeCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\EnergyDevicesCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoseDisplayVS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoseDisplayPS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\LineDrawUserPS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\LIneDrawUserVS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\PatientMFPCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\SpotPrepSOBPCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\TransportPatientCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoseSumCS.hlsl">
+      <Filter>Source Files\DxShaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

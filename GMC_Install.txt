@@ -1,0 +1,34 @@
+
+For development GMC requires
+
+  Microsoft Windows 10 (or higher)
+
+  Microsoft Visual Studio Community (or Professional) 2022 (or later)
+	Desktop Deveopment with C++
+        Game Development with C++
+        Windows 10 SDK
+        C++ v14 ATL
+	C++ v14 MFC
+
+For running GMC requires
+
+	NVIDA graphics card
+
+
+Installation
+
+(1) Pull the gmcGPPU repository from GitHub to a folder, e.g. C:\MyProjects
+
+(2) Move the zip file C:\MyProjects\gmcGPPU\GMCdcmtk.zip to C:\MyProjects
+
+(3) Unzip GMCdcmtk.zip to present folder (C:\MyProjects)
+
+(4) Pull the PlaYer repository from GitHub to C:\MyProjects\gmcGPPU\PACS\PlaYer
+	(There is already a placeholder PlaYer folder there)
+
+(5) Go to folder C:\MyProjects\gmcGPPU\gmcGPU
+
+(6) Unzip C:\MyProjects\gmcGPPU\gmcGPU\json.zip to its present location. Remove json.zip
+
+
+
