@@ -1,5 +1,8 @@
 PACS/Player
 gmcGPU/x64
+gmcGPU/JSON
+.hg
+Patients
 *aps
 *bin
 *csv

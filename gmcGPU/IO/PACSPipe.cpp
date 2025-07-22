@@ -630,7 +630,7 @@ bool CPACSPipe::StoreFile(LPCTSTR fileName)
   CString dicomCmnd;
 
   dicomCmnd.Format("storescu -v -aet %s -aec %s %s %s \"%s\"",
-    g_configInstance->m_directoryBase, m_msgParamsStore->aeNameGMC, m_msgParamsStore->aeNameServer, m_msgParamsStore->serverIPAddress, m_msgParamsStore->serverPortNum, fileName);
+    m_msgParamsStore->aeNameGMC, m_msgParamsStore->aeNameServer, m_msgParamsStore->serverIPAddress, m_msgParamsStore->serverPortNum, fileName);
   m_execInfo.lpParameters = m_execParamsStore;
 
   ReturnOnFalse(ExecuteDicomCommand(dicomCmnd));

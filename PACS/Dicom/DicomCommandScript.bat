@@ -1,0 +1,1 @@
+storescu -v -aet nickAET -aec MIM_SERVER 172.27.45.252 4008 "C:\MyProjects\gmcGPU\Patients\729-83-70\2.16.840.1.114460.178.1.1628682027.364.8072281\OUT\GMC_2.1.1_Dose_GMC_Test2_FOV 40 NO IV_Clivus 78Gy(RBE) SIB BURR- SMM approved.dcm"

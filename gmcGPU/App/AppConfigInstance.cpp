@@ -18,7 +18,7 @@ CAppConfigInstance::~CAppConfigInstance(void)
 
 bool CAppConfigInstance::ParseJson(void)
 {
-  FILE* fd = fopen(".\\GMCConfigInstance.json", "r");
+  FILE* fd = fopen("C:\\ProgramData\\MGHRO\\Gmc\\GMCConfigInstance.json", "r");
   ReturnOnNull(fd);
 
   CJsonParser jParser;
