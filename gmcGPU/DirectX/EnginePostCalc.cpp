@@ -1221,7 +1221,7 @@ double CEnginePostCalc::CalcEnergyPatientMulti(SVoxGridGeometry* gridDose, CDxTe
 
 #include "tgif.h"
 
-SGammaResults* CEnginePostCalc::CalcGamma(SGammaThresholds* gammaThresholds)
+SGammaResults* CEnginePostCalc::CalcGamma(SGammaThresholds* gammaThresholds, LPCTSTR outputFolder)
 {
 
   //Maximum number of iterations in search for smallest distance to agreement
@@ -1325,7 +1325,8 @@ SGammaResults* CEnginePostCalc::CalcGamma(SGammaThresholds* gammaThresholds)
   float D_gamma_const = (gammaThresholds->threshDosePrcnt/100.0) * vector_util_max(D0.M);
   float thresh        = (gammaThresholds->threshDoseMinPrcnt/100.0) * vector_util_max(D1.M);  
 
-  CString logFile = g_configInstance->m_directoryBase + "\\gammaLog.txt";
+  CString logFile = outputFolder;
+  logFile += "\\gammaLog.txt";
   logfile_open(logFile);
 
   //Matrix<float> gamma = tgif(x0, y0, z0, unit0, D0, unitD0,

@@ -51,6 +51,7 @@ struct STransportParams
 
   CString pathNamePlan;
   CString fileNamePlan;
+  CString fileNameDose;
 };
 
 struct SDijParams

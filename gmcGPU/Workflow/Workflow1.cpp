@@ -208,12 +208,12 @@ ________________________________________________________________________________
 
 void CWorkflow::ThreadProcEndtoEnd(void)
 {
+  unsigned int bitmaskFields;
 
   m_enginePostCalc->ClearResources();
 
   if (m_playerStatus)
   {
-
     if (BuildJSON() == false)
     {
       SendErrorNotice();
@@ -243,7 +243,48 @@ void CWorkflow::ThreadProcEndtoEnd(void)
 
   if (m_transportParams->autoMode)
   {
-    RunAutoModePostCalc();
+    if (m_transportParams->doseQA)
+    {
+      SaveDosesQAGamma();
+    }
+
+    if (m_gammaThresholds)
+    {
+      CString dicom = m_transportParams->pathNamePlan.Left(m_transportParams->pathNamePlan.Find("\\OUT"));
+
+      CString doseFileName = dicom + "\\" + m_transportParams->fileNameDose;
+
+      m_enginePostCalc->LoadExternalDoseDicom(doseFileName);
+
+      SGammaResults* gammaResults = m_enginePostCalc->CalcGamma(m_gammaThresholds);
+
+
+
+      bitmaskFields = DOSE_GAMMA;
+    }
+
+    int pacsSave = (m_modeWF == WF_MODE_PACS_MON || m_transportParams->pacsSave) ? true : false;
+
+    if (pacsSave)
+    {
+      SendUpdateNotice(WF_UPDATE_SAVE_PACS);
+    }
+    else
+    {
+      SendUpdateNotice(WF_UPDATE_SAVE_DISK);
+    }
+
+
+    if (m_transportParams->doseAux)
+    {
+      bitmaskFields |= ((1 << NUM_DOSE_TYPES) - 1);
+    }
+    else
+    {
+      bitmaskFields |= 1;
+    }
+
+    SaveDosesPatient(bitmaskFields, "Auto", pacsSave);
   }
 
   m_wndNotify->PostMessage(MSG_WF_COMPUTE_DONE, WF_TASK_PASS, NULL);
@@ -321,7 +362,7 @@ void CWorkflow::ThreadProcPACSPlanSearch(void)
 
 void CWorkflow::ThreadProcComputeGamma(void)
 {
-  SGammaResults* gammaResults = m_enginePostCalc->CalcGamma(m_gammaThresholds, m_transportParams->pathNamePlan);
+  SGammaResults* gammaResults = m_enginePostCalc->CalcGamma(m_gammaThresholds);
 
   m_wndNotify->PostMessage(MSG_WF_CALC_GAMMA_DONE, (WPARAM)gammaResults, NULL);
 
@@ -517,68 +558,14 @@ bool CWorkflow::RunQABeamsManual(void)
    Routines to save results to disk and/or PACS
 _______________________________________________________________________________________________*/
 
-void CWorkflow::RunAutoModePostCalc(void)
-{
-  unsigned int bitmaskDoseSave;
-
-  if (m_transportParams->doseQA)
-  {
-    SaveDosesQAGamma();
-  }
-
-  if (m_gammaThresholds)
-  {
-    CString dicom = m_transportParams->pathNamePlan.Left(m_transportParams->pathNamePlan.Find("\\OUT"));
-
-    CString doseFileName = dicom + "\\" + m_transportParams->fileNameDose;
-
-    m_enginePostCalc->LoadExternalDoseDicom(doseFileName);
-
-    SGammaResults* gammaResults = m_enginePostCalc->CalcGamma(m_gammaThresholds, m_transportParams->pathNamePlan);
-
-    CString resultsFileName = m_transportParams->pathNamePlan + "\\" + "GammaResults.txt";
-    FILE* fd = fopen(resultsFileName, "w");
-    fprintf(fd, "  Gamma Thresholds\nDistance(mm)    %5.2f\nDose(%%)         %5.2f\nDoseMin(%%)      %5.2f\n\n Gamma Results\nNum Iterations      %2d\nFraction Converged  %6.4f",
-      m_gammaThresholds->threshDistanceMM, m_gammaThresholds->threshDosePrcnt, m_gammaThresholds->threshDoseMinPrcnt, gammaResults->numIterations, gammaResults->fractionConverged);
-    fclose(fd);
-
-    bitmaskDoseSave = 1 << DOSE_GAMMA;
-  }
-
-  int pacsSave = (m_modeWF == WF_MODE_PACS_MON || m_transportParams->pacsSave) ? true : false;
-
-  if (pacsSave)
-  {
-    SendUpdateNotice(WF_UPDATE_SAVE_PACS);
-  }
-  else
-  {
-    SendUpdateNotice(WF_UPDATE_SAVE_DISK);
-  }
-
-
-  if (m_transportParams->doseAux)
-  {
-    bitmaskDoseSave |= ((1 << NUM_DOSE_TYPES) - 1);
-  }
-  else
-  {
-    bitmaskDoseSave |= 1;
-  }
-
-  SaveDosesPatient(bitmaskDoseSave, "Auto", pacsSave);
-
-  return;
-}
-
-void CWorkflow::SaveDosesPatient(unsigned int bitmaskDoseSave, LPCTSTR userDescr, bool pacsSend)
+void CWorkflow::SaveDosesPatient(unsigned int bitmaskFields, LPCTSTR userDescr, bool pacsSend)
 {
   CString descr;
   CString gmcInfo = s_seriesPrefix[0] + VERSION_SYSTEM;
 
   for (int indexDose = 0; indexDose < NUM_DOSE_TYPES; ++indexDose)
   {
-    if ((1 << indexDose) & bitmaskDoseSave)
+    if ((1 << indexDose) & bitmaskFields)
     {
       if (userDescr == NULL || userDescr[0] == 0)
       {
@@ -593,7 +580,7 @@ void CWorkflow::SaveDosesPatient(unsigned int bitmaskDoseSave, LPCTSTR userDescr
     }
   }
 
-  if ((1 << DOSE_GAMMA) & bitmaskDoseSave)
+  if ((1 << DOSE_GAMMA) & bitmaskFields)
   {
     if (userDescr == NULL || userDescr[0] == 0)
     {

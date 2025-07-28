@@ -69,7 +69,7 @@ public:
   }
 
   void RunThreadProcCurrent(void);
-  void RunCommandLine(STransportParams* transportParams, CWnd* wndNotify, bool playerStatus = false);
+  void RunCommandLine(STransportParams* transportParams, CWnd* wndNotify, bool playerStatus = false, SGammaThresholds* gammaThresh = NULL);
 
 private:
 
@@ -88,6 +88,7 @@ private:
   bool ComputeTransport(void);
   bool RunQABeamsManual(void);
 
+  void RunAutoModePostCalc(void);
   bool SaveDoseFieldDicom(int saveType, int indexDose, LPCTSTR descr, int pacsSend);
   void SaveDosesQAGamma(void);
   void SaveDosesQADicom(int pacsSend);

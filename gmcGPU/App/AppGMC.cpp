@@ -136,16 +136,35 @@ bool CAppGMC::RunCommandLine(CAppState* appState)
 
 	CString stringProtons;
 	bool playerStatus;
+	int gammaCalc;
+	int auxCalc;
+	SGammaThresholds gammaThresh;
+	SGammaThresholds* gammaRun;
 
 	while (file.ReadString(params->pathNamePlan))
 	{
 		file.ReadString(params->fileNamePlan);
+		file.ReadString(params->fileNameDose);
 		file.ReadString(stringProtons);
 		sscanf(stringProtons, "%d %d", &params->numCycles, &params->protonScaleFactor);
+		file.ReadString(stringProtons);
+		sscanf(stringProtons, "%d %d", &auxCalc, &gammaCalc);
+		params->doseAux = auxCalc;
 
-		playerStatus = params->fileNamePlan.Find("json") ? false : true;
+		if (gammaCalc)
+		{
+			file.ReadString(stringProtons);
+			sscanf(stringProtons, "%f %f %f", &gammaThresh.threshDistanceMM, &gammaThresh.threshDosePrcnt, &gammaThresh.threshDoseMinPrcnt);
+			gammaRun = &gammaThresh;
+		}
+		else
+		{
+			gammaRun = NULL;
+		}
 
-		workflow->RunCommandLine(params, CWnd::GetDesktopWindow(), playerStatus);
+		playerStatus = (params->fileNamePlan.Find("json") == -1) ? true : false;
+
+		workflow->RunCommandLine(params, CWnd::GetDesktopWindow(), playerStatus, gammaRun);
 	}
 
 	return true;

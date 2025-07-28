@@ -44,7 +44,7 @@ public:
   float SumExternalDose(CIonPlan* ionPlan);
   void CalcDoseHistogram(int doseType, FILE* fd, int flag);
   void CalcEnergy(SEnergies* energies);
-  SGammaResults* CalcGamma(SGammaThresholds* gammaThresholds);
+  SGammaResults* CalcGamma(SGammaThresholds* gammaThresholds, LPCTSTR logFolder);
   void CopyTextureData(CDxTexture3D* inputTexture, float* data);
 
   void SaveDicom(LPCTSTR fileName, LPCTSTR seriesDescr, CIonPlan* ionPlan, int saveType, int indexDose);

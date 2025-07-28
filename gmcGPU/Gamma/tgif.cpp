@@ -358,8 +358,8 @@ void tgif(vector<float> x0, vector<float> y0, vector<float> z0,  string unit0,
     signed_gamma = abs(signed_gamma);
 
     gammaResults->numIterations     = Nmax;
-    gammaResults->fractionConverged = nvoxels;
-    gammaResults->convergenceFactor = convergence;
+    gammaResults->convergenceFactor = nvoxels;
+    gammaResults->fractionConverged = convergence;
   } // if (Nmax>1)
 
   // cout<<"Gamma pass rate = "<<100*nvoxels<<"%"<<endl;
